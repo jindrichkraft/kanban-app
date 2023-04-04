@@ -7,10 +7,14 @@
     'sidebar navigation'
     'sidebar content'; 
   height: 100vh;
-  background-color: #2C2C38;
+  background-color: #21212D;
   color: #FEFFFF;
 }
 
 .page-sidebar { grid-area: sidebar; }
 .page-navigation { grid-area: navigation; }
-.page-content { grid-area: content; padding: 1.8rem; }
+.page-content {
+  grid-area: content;
+  padding: 1.8rem;
+  overflow-y: scroll;
+}

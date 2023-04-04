@@ -1,7 +1,50 @@
 .task-columns {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.8rem;
+  margin: 0 auto;
   width: 100%;
-  max-width: 240rem;
+  max-width: 128rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .column {
+    .column-title {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      opacity: 0.7;
+
+      &::before {
+        content: '';
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: #2C2C38;
+        border-radius: 99px;
+      }
+    }
+
+    .tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    &.column--todo {
+      .column-title::before { background-color: #45C5E3; }
+    }
+    &.column--doing {
+      .column-title::before { background-color: #836EF5; }
+    }
+    &.column--done {
+      .column-title::before { background-color: #60E5AE; }
+    }
+  }
 }

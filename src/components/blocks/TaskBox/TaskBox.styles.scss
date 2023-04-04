@@ -1,0 +1,15 @@
+.task-box {
+  padding: 2.4rem 1.8rem;
+  background-color: #2C2C38;
+  border-radius: 0.6rem;
+
+  .box-title {
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+  }
+
+  .box-text {
+    line-height: 150%;
+    opacity: 0.7;
+  }
+}
