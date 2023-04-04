@@ -14,3 +14,11 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+input,
+select,
+textarea,
+button {
+  color: inherit;
+  font-family: inherit;
+}

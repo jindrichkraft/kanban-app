@@ -4,14 +4,29 @@
   padding: 0 1.8rem;
   border-bottom: 1px solid #3F3F4B;
 
+  .board-name-label {
+    font-size: 1.8rem;
+  }
+
   .nav-items {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     gap: 1.8rem;
     margin-left: auto;
 
     .nav-item {
       cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.full-opacity {
+        opacity: 1;
+      }
     }
   }
 }
