@@ -1,8 +1,9 @@
 import DefaultLayout from '../layouts/DefaultLayout';
+import TaskColumns from '../components/blocks/TaskColumns';
 
 const HomePage = (): JSX.Element => (
   <DefaultLayout>
-    <h1>Home</h1>
+    <TaskColumns />
   </DefaultLayout>
 );
 
