@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 
 import './styles/reset.scss';
 import './styles/main.scss';
+import './styles/layout.scss';
 
 const App = (): JSX.Element => (
   <Routes>

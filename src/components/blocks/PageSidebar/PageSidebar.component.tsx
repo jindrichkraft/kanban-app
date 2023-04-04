@@ -1,5 +1,7 @@
+import './PageSidebar.styles.scss';
+
 const PageSidebar = (): JSX.Element => (
-  <nav>
+  <nav className="page-sidebar">
     <h2>Sidebar</h2>
   </nav>
 );

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 
+import './PageNavigation.styles.scss';
+
 const PageNavigation = (): JSX.Element => (
-  <nav>
+  <nav className="page-navigation">
     <h2>Page Navigation</h2>
-    <ul>
-      <li>
+    <ul className="nav-items">
+      <li className="nav-item">
         <Link to="/">Home</Link>
       </li>
     </ul>

@@ -9,7 +9,7 @@ const DefaultLayout = ({ children }: IProps): JSX.Element => (
   <>
     <PageSidebar />
     <PageNavigation />
-    {children}
+    <div className="page-content">{children}</div>
   </>
 );
 

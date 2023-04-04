@@ -1,0 +1,14 @@
+#root {
+  display: grid; 
+  grid-template-columns: 240px 1fr; 
+  grid-template-rows: 60px 1fr; 
+  gap: 0px 0px;
+  grid-template-areas: 
+    'sidebar navigation'
+    'sidebar content'; 
+  height: 100vh;
+}
+
+.page-sidebar { grid-area: sidebar; }
+.page-navigation { grid-area: navigation; }
+.page-content { grid-area: content; }
