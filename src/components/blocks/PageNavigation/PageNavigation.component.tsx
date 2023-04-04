@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import Icon from '../../elements/Icon';
 
 import './PageNavigation.styles.scss';
 
 const PageNavigation = (): JSX.Element => (
   <nav className="page-navigation">
-    <h2>Page Navigation</h2>
+    <h2>Board Name</h2>
     <ul className="nav-items">
+      <li className="nav-item">Add new task</li>
       <li className="nav-item">
-        <Link to="/">Home</Link>
+        <Icon name="ellipsis-vertical" type="fas" />
       </li>
     </ul>
   </nav>

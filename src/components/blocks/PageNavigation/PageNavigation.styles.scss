@@ -1,9 +1,17 @@
 .page-navigation {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #dedede;
+  padding: 0 1.8rem;
+  border-bottom: 1px solid #3F3F4B;
 
   .nav-items {
     display: flex;
+    justify-content: flex-end;
+    gap: 1.8rem;
+    margin-left: auto;
+
+    .nav-item {
+      cursor: pointer;
+    }
   }
 }
