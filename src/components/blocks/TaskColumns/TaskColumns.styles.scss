@@ -1,0 +1,7 @@
+.task-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 240rem;
+}
