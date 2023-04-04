@@ -47,9 +47,23 @@ const PageSidebar = (): JSX.Element => (
           Board Name
         </a>
       </li>
+      <li className="sidebar-item new-board">
+        <div className="board-icon">
+          <Icon name="plus" type="fas" />
+        </div>
+        <a href="#" className="sidebar-link">
+          Create new board
+        </a>
+      </li>
     </ul>
     <div className="theme-switch-box">
       <Icon name="sun" type="fas" />
+      <div className="toggle">
+        <input type="checkbox" id="theme-toggle" />
+        <label htmlFor="theme-toggle">
+          <span className="sr-only">Toggle Switch</span>
+        </label>
+      </div>
       <Icon name="moon" type="fas" />
     </div>
   </nav>
