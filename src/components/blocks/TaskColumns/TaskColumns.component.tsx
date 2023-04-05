@@ -9,9 +9,9 @@ interface IProps {
 import './TaskColumns.styles.scss';
 
 const TaskColumns = ({ tasks }: IProps): JSX.Element => {
-  const todoTasks = tasks.filter((task) => task.type === 'todo');
-  const doingTasks = tasks.filter((task) => task.type === 'doing');
-  const doneTasks = tasks.filter((task) => task.type === 'done');
+  const todoTasks = tasks.filter((task) => task.status === 1);
+  const doingTasks = tasks.filter((task) => task.status === 2);
+  const doneTasks = tasks.filter((task) => task.status === 3);
 
   return (
     <div className="task-columns">

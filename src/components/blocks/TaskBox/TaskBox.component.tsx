@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 import Icon from '../../elements/Icon';
-import { removeTask } from '../../../redux/slices/task';
+import { moveBack, moveForward, removeTask } from '../../../redux/slices/task';
 
 import type { ITask } from '../../../typings/task';
 
@@ -14,12 +14,12 @@ interface IProps {
 const TaskBox = ({ task }: IProps): JSX.Element => {
   const dispatch = useDispatch();
 
-  const handleMoveBack = () => {
-    alert('a');
+  const handleMoveBack = (id: ITask['id']) => {
+    dispatch(moveBack(id));
   };
 
-  const handleMoveForward = () => {
-    alert('a');
+  const handleMoveForward = (id: ITask['id']) => {
+    dispatch(moveForward(id));
   };
 
   const handleDelete = (id: ITask['id']) => {
@@ -30,13 +30,19 @@ const TaskBox = ({ task }: IProps): JSX.Element => {
     <div className="task-box">
       <h4 className="box-text">{task.title}</h4>
       <div className="box-icons">
-        {task.type !== 'todo' ? (
-          <div className="move-back-icon" onClick={handleMoveBack}>
+        {task.status !== 1 ? (
+          <div
+            className="move-back-icon"
+            onClick={() => handleMoveBack(task.id)}
+          >
             <Icon name="arrow-left" type="fas" />
           </div>
         ) : null}
-        {task.type !== 'done' ? (
-          <div className="move-forward-icon" onClick={handleMoveForward}>
+        {task.status !== 3 ? (
+          <div
+            className="move-forward-icon"
+            onClick={() => handleMoveForward(task.id)}
+          >
             <Icon name="arrow-right" type="fas" />
           </div>
         ) : null}

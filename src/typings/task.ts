@@ -1,5 +1,5 @@
 export interface ITask {
   id: number;
-  type: 'todo' | 'doing' | 'done';
+  status: number;
   title: string;
 }
