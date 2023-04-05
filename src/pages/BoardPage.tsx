@@ -1,25 +1,18 @@
+import { useSelector } from 'react-redux';
+
 import DefaultLayout from '../layouts/DefaultLayout';
 import TaskColumns from '../components/blocks/TaskColumns';
 
-const BoardPage = (): JSX.Element => (
-  <DefaultLayout>
-    <TaskColumns
-      todoTasks={[{ title: 'Task ' }, { title: 'Task ' }, { title: 'Task ' }]}
-      doingTasks={[
-        { title: 'Task ' },
-        { title: 'Task ' },
-        { title: 'Task ' },
-        { title: 'Task ' },
-        { title: 'Task ' },
-      ]}
-      doneTasks={[
-        { title: 'Task ' },
-        { title: 'Task ' },
-        { title: 'Task ' },
-        { title: 'Task ' },
-      ]}
-    />
-  </DefaultLayout>
-);
+import type { RootState } from '../redux/store';
+
+const BoardPage = (): JSX.Element => {
+  const { tasks } = useSelector((state: RootState) => state.tasks);
+
+  return (
+    <DefaultLayout>
+      <TaskColumns tasks={tasks || []} />
+    </DefaultLayout>
+  );
+};
 
 export default BoardPage;

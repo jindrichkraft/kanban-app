@@ -5,6 +5,16 @@
   background-color: #2C2C38;
   border-bottom: 1px solid #3F3F4B;
 
+  .sidebar-hider {
+    margin-right: 1.8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
   .board-name-label {
     font-size: 1.6rem;
   }

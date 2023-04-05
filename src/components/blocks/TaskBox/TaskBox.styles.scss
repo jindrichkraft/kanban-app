@@ -5,8 +5,13 @@
   background-color: #2C2C38;
   border-radius: 0.6rem;
 
-  .icon {
+  .box-icons {
+    display: flex;
+    gap: 1.2rem;
     margin-left: auto;
+  }
+
+  .icon {
     opacity: 0.5;
     transition: opacity 0.2s;
     cursor: pointer;

@@ -5,6 +5,9 @@ import './PageNavigation.styles.scss';
 
 const PageNavigation = (): JSX.Element => (
   <nav className="page-navigation">
+    <div className="sidebar-hider">
+      <Icon name="bars" type="fas" />
+    </div>
     <h2 className="board-name-label">Board Name</h2>
     <ul className="nav-items">
       <li className="nav-item full-opacity">
