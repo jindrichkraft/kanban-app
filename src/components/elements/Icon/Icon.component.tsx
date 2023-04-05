@@ -9,13 +9,15 @@ import './Icon.styles.scss';
 interface IProps {
   name: IconName;
   type: IconPrefix;
+  // eslint-disable-next-line
+  [x: string]: any;
 }
 
 library.add(fas);
 
-const Icon = ({ name, type }: IProps): JSX.Element => (
+const Icon = ({ name, type, ...restProps }: IProps): JSX.Element => (
   <div className="icon">
-    <FontAwesomeIcon icon={[type, name]} />
+    <FontAwesomeIcon icon={[type, name]} {...restProps} />
   </div>
 );
 

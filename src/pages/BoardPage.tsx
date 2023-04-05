@@ -1,7 +1,7 @@
 import DefaultLayout from '../layouts/DefaultLayout';
 import TaskColumns from '../components/blocks/TaskColumns';
 
-const HomePage = (): JSX.Element => (
+const BoardPage = (): JSX.Element => (
   <DefaultLayout>
     <TaskColumns
       todoTasks={[{ title: 'Task ' }, { title: 'Task ' }, { title: 'Task ' }]}
@@ -22,4 +22,4 @@ const HomePage = (): JSX.Element => (
   </DefaultLayout>
 );
 
-export default HomePage;
+export default BoardPage;

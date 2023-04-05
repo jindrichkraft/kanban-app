@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
+import BoardPage from './pages/BoardPage';
 
 import './styles/reset.scss';
 import './styles/main.scss';
@@ -8,7 +8,7 @@ import './styles/layout.scss';
 
 const App = (): JSX.Element => (
   <Routes>
-    <Route path="/" element={<HomePage />} />
+    <Route path="/board/:id" element={<BoardPage />} />
   </Routes>
 );
 

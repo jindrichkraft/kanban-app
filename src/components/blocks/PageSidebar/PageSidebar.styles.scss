@@ -27,7 +27,7 @@
     flex-direction: column;
     gap: 0.4rem;
 
-    .sidebar-item {
+    .sidebar-item .sidebar-link {
       display: flex;
       align-items: center;
       margin-right: 1.8rem;
@@ -39,7 +39,7 @@
       border-radius: 0 99px 99px 0;
       opacity: 0.7;
       transition: 0.2s;
-      transition-property: color, opacity;
+      transition-property: background-color, color, opacity;
       cursor: pointer;
 
       .board-icon {
